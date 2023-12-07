@@ -1,39 +1,46 @@
 import cv2
 import pickle
 
+image_path = "otopark2.png"
 
 try:
-    with open("noktalar","rb") as f:
-        liste=pickle.load(f)
-except:        
-    liste=[]
+    img = cv2.imread(image_path)
+    if img is None:
+        raise FileNotFoundError(f"Hata: Yüklenecek resim bulunamadı. '{image_path}'.")
 
-def mouse(events,x,y,flags,params):
-    if events==cv2.EVENT_LBUTTONDOWN:
-        liste.append((x,y))
+    with open("noktalar.pkl", "rb") as f:
+        liste = pickle.load(f)
+except FileNotFoundError:
+    print(f"Uyarı:'noktalar.pkl' dosyası bulunamadı.")
+    liste = []
 
-    if events==cv2.EVENT_RBUTTONDOWN:
-        for i,pos in enumerate(liste):
-            x1,y1=pos
-            if x1<x<x1+26 and y1<y<y1+15:
+def mouse(event, x, y, flags, params):
+    global liste
+    if event == cv2.EVENT_LBUTTONDOWN:
+        liste.append((x, y))
+
+    elif event == cv2.EVENT_RBUTTONDOWN:
+        for i, pos in reversed(list(enumerate(liste))):
+            x1, y1 = pos
+            if x1 < x < x1 + 40 and y1 < y < y1 + 60:
                 liste.pop(i)
 
-    with open("noktalar","wb") as f:
-        pickle.dump(liste,f )                
+    with open("noktalar.pkl", "wb") as f:
+        pickle.dump(liste, f)
 
+cv2.namedWindow("otopark")
+cv2.setMouseCallback("otopark", mouse)
 
 while True:
-    img=cv2.imread("first_frame.png")
-    #print(liste)
-
+    img_copy = img.copy()
     for l in liste:
-        cv2.rectangle(img,l,(l[0]+26,l[1]+15),(255,0,0),2)
+        cv2.rectangle(img_copy, l, (l[0] + 40, l[1] + 60), (0, 0, 255), 2)
 
-    cv2.imshow("img",img)
-    cv2.setMouseCallback("img",mouse)
+    cv2.imshow("otopark", img_copy)
 
-    if cv2.waitKey(1) &0xFF==ord("q"):
-        
+    cv2.waitKey(10)
+
+    if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
 cv2.destroyAllWindows()
