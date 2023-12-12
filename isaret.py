@@ -22,7 +22,7 @@ def mouse(event, x, y, flags, params):
     elif event == cv2.EVENT_RBUTTONDOWN:
         for i, pos in reversed(list(enumerate(liste))):
             x1, y1 = pos
-            if x1 < x < x1 + 26 and y1 < y < y1 + 15:
+            if x1 < x < x1 + 24 and y1 < y < y1 + 12:
                 liste.pop(i)
 
     with open("noktalar", "wb") as f:
@@ -34,7 +34,7 @@ cv2.setMouseCallback("otopark", mouse)
 while True:
     img_copy = img.copy()
     for l in liste:
-        cv2.rectangle(img_copy, l, (l[0] + 26, l[1] + 15), (255, 0, 0), 2)
+        cv2.rectangle(img_copy, l, (l[0] + 24, l[1] + 12), (255, 0, 0), 2)
 
     cv2.imshow("otopark", img_copy)
 
