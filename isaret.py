@@ -8,7 +8,7 @@ try:
     if img is None:
         raise FileNotFoundError(f"Hata: Yüklenecek resim bulunamadı. '{image_path}'.")
 
-    with open("noktalar1", "rb") as f:
+    with open("noktalar", "rb") as f:
         liste = pickle.load(f)
 except FileNotFoundError:
     print(f"Uyarı: Dosya bulunamadı.")
@@ -22,10 +22,10 @@ def mouse(event, x, y, flags, params):
     elif event == cv2.EVENT_RBUTTONDOWN:
         for i, pos in reversed(list(enumerate(liste))):
             x1, y1 = pos
-            if x1 < x < x1 + 25 and y1 < y < y1 + 16:
+            if x1 < x < x1 + 26 and y1 < y < y1 + 15:
                 liste.pop(i)
 
-    with open("noktalar1", "wb") as f:
+    with open("noktalar", "wb") as f:
         pickle.dump(liste, f)
 
 cv2.namedWindow("otopark")
@@ -34,7 +34,7 @@ cv2.setMouseCallback("otopark", mouse)
 while True:
     img_copy = img.copy()
     for l in liste:
-        cv2.rectangle(img_copy, l, (l[0] + 25, l[1] + 16), (255, 0, 0), 2)
+        cv2.rectangle(img_copy, l, (l[0] + 26, l[1] + 15), (255, 0, 0), 2)
 
     cv2.imshow("otopark", img_copy)
 
