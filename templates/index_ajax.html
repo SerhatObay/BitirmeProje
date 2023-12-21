@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otopark Doluluk Oranı</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>Otopark Doluluk Oranı</h1>
+    <p id="percentage">Doluluk: </p>
+
+    <img id="videoFrame" src="{{ url_for('static', filename='video_frame.jpg') }}" alt="Video Frame">
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            function updatePercentage() {
+                $.ajax({
+                    url: '/get_percentage',
+                    type: 'GET',
+                    success: function(data) {
+                        $('#percentage').html('Doluluk: ' + data.percentage + '%');
+                        $('#videoFrame').attr('src', data.image_url);
+                    },
+                    complete: function() {
+                        // Bu fonksiyon, her istek tamamlandığında çalışır.
+                        // İstekler arasında belirli bir gecikme olmasını sağlar.
+                        setTimeout(updatePercentage, 1000);
+                    }
+                });
+            }
+
+            // Sayfa yüklendiğinde ilk kez çalıştır
+            updatePercentage();
+        });
+    </script>
+</body>
+</html>
