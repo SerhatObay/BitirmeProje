@@ -23,7 +23,8 @@ def check(frame1):
     
     percentage = int(100-(space_counter / len(liste)) * 100)
 
-    cv2.putText(frame,f"doluluk:%{percentage}",(12,24),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,0),3)
+    cv2.putText(frame, f"Doluluk: %{percentage}", (12, 339), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 3, cv2.LINE_AA)
+
     
 
 with open("noktalar","rb") as f:
@@ -43,9 +44,8 @@ while True:
     cv2.imshow("video",frame)
     
 
-    if cv2.waitKey(300) & 0XFF == ord("q"):
+    if cv2.waitKey(200) & 0XFF == ord("q"):
         break
 
 cap.release()
-
 cv2.destroyAllWindows()
