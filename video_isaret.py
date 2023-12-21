@@ -40,7 +40,7 @@ def get_percentage():
 
     percentage = check(dilates)
 
-    cv2.imwrite("static/video_frame.jpg", frame)  # Save the frame as a static image
+    
 
     return jsonify({'percentage': percentage, 'image_url': '/static/video_frame.jpg'})
 
