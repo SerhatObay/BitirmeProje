@@ -25,6 +25,10 @@ def check(frame1):
     return percentage
 
 @app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/index_ajax')
 def index():
     return render_template('index_ajax.html')
 
