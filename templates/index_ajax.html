@@ -11,27 +11,33 @@
     <h1>Otopark Doluluk Oranı</h1>
     <p id="percentage">Doluluk: </p>
 
-    <img id="videoFrame" src="{{ url_for('static', filename='video_frame.jpg') }}" alt="Video Frame">
+    <video id="videoFrame" width="640" height="360" controls autoplay muted>
+        <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <script type="text/javascript">
         $(document).ready(function() {
+            
+            var video = document.getElementById('videoFrame');
+
             function updatePercentage() {
                 $.ajax({
                     url: '/get_percentage',
                     type: 'GET',
                     success: function(data) {
                         $('#percentage').html('Doluluk: ' + data.percentage + '%');
-                        $('#videoFrame').attr('src', data.image_url);
                     },
                     complete: function() {
-                        // Bu fonksiyon, her istek tamamlandığında çalışır.
-                        // İstekler arasında belirli bir gecikme olmasını sağlar.
+                        
+                        video.playbackRate = 0.2;
+                        
                         setTimeout(updatePercentage, 1000);
                     }
                 });
             }
 
-            // Sayfa yüklendiğinde ilk kez çalıştır
+           
             updatePercentage();
         });
     </script>
