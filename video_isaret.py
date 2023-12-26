@@ -48,4 +48,4 @@ if __name__ == '__main__':
     with open("noktalar", "rb") as f:
         liste = pickle.load(f)
 
-    socketio.run(app, debug=True)
+    socketio.run(app, debug=True, port=5001)
