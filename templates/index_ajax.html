@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
 
     <title>Park23</title>
 
-    <link rel="shortcut icon" type="image/icon" href="static/logo/favicon.png"/>
+    <link rel="shortcut icon" type="image/icon" href="static/logo/favicon.png" />
     <link rel="stylesheet" href="static/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/css/linearicons.css">
     <link rel="stylesheet" href="static/css/flaticon.css">
@@ -20,294 +22,302 @@
     <link rel="stylesheet" href="static/css/owl.carousel.min.css">
     <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/bootsnav.css" >
+    <link rel="stylesheet" href="static/css/bootsnav.css">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/responsive.css">
-    
-    
+
+
 </head>
 
-	
-	<body>
-		
-		<section id="home" class="welcome-hero">
 
-			
-			<div class="top-area">
-				<div class="header-area">
-					
-				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+<body>
 
-				        <div class="container">
+    <section id="home" class="welcome-hero">
 
-				           
-				            <div class="navbar-header">
-				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-				                    <i class="fa fa-bars"></i>
-				                </button>
-				                <a class="navbar-brand" href="index.html">carvilla<span></span></a>
 
-				            </div>
-				           
+        <div class="top-area">
+            <div class="header-area">
 
-				            
-				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-				                    <li class=" scroll active"><a href="#home">Ana Sayfa</a></li>
-				                    <li class="scroll"><a href="#service">Otoparklar</a></li>
-				                    <li class="scroll"><a href="#contact">İletişim</a></li>
-				                </ul>
-				            </div>
-				        </div>
-				    </nav>
-				    
-				</div>
-			    <div class="clearfix"></div>
+                <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"
+                    data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
 
-			</div>
-			
+                    <div class="container">
 
-			<div class="container">
-				<div class="welcome-hero-txt">
-					<h2>get your desired car in resonable price</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore   magna aliqua. 
-					</p>
-					<button class="welcome-btn" onclick="window.location.href='#contact'">Bizimle İletişime Geçin</button>
-				</div>
-			</div>
 
-			
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#navbar-menu">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <a class="navbar-brand" href="/">CarHouse<span></span></a>
 
-		</section>
-		
+                        </div>
 
-		
-		<section id="service" class="service">
-			<div class="container">
-				<div class="service-content">
-					<div class="row">
-						<div class="col-md-12 col-sm-12">
-							<h1>Otopark Doluluk Oranı</h1>
+
+                        <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                                <li class=" scroll active"><a href="/">Ana Sayfa</a></li>
+                                <li class="scroll"><a href="#service">Otoparklar</a></li>
+                                <li class="scroll"><a href="#contact">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+
+
+        <div class="container">
+            <div class="welcome-hero-txt">
+                <h2>Seçtiğiniz Otoparkın Doluluk Oranını Aşağıda Bulabilirsiniz.</h2>
+                <button class="welcome-btn" onclick="window.location.href='#contact'">Bizimle İletişime Geçin</button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <body>
+
+
+        <section id="service" class="service">
+            <div class="container">
+                <div class="service-content">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <h1>Otopark Doluluk Oranı</h1>
                             <p id="percentage">Doluluk: </p>
 
                             <video id="videoFrame" width="1080" height="720" controls autoplay muted>
-                            <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
-                                Your browser does not support the video tag.
+                                <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
+                                Tarayıcınız bu videoyu desteklememektedir.
                             </video>
 
+                            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
                             <script type="text/javascript">
-                                $(document).ready(function() {
-            
-                            var video = document.getElementById('videoFrame');
 
-                            function updatePercentage() {
-                            $.ajax({
-                            url: '/get_percentage',
-                            type: 'GET',
-                            success: function(data) {
-                            $('#percentage').html('Doluluk: ' + data.percentage + '%');
-                            },
-                            complete: function() {
-                        
-                            video.playbackRate = 0.2;
-                        
-                            setTimeout(updatePercentage, 1000);
-                            }
-                            });
-                            }
+                                $(document).ready(function () {
+                                    var video = document.getElementById('videoFrame');
+                                    var isVideoEnded = false;
 
-           
-                            updatePercentage();
-                            });
+                                    
+                                    var storedPercentage = localStorage.getItem('storedPercentage') || 0;
+                                    $('#percentage').html('Doluluk: %' + storedPercentage);
+
+                                    function updatePercentage() {
+                                        if (!isVideoEnded) {
+                                            $.ajax({
+                                                url: '/get_percentage',
+                                                type: 'GET',
+                                                success: function (data) {
+                                                   
+                                                    $('#percentage').html('Doluluk: %' + data.percentage);
+
+                                                    
+                                                    localStorage.setItem('storedPercentage', data.percentage);
+                                                },
+                                                complete: function () {
+                                                    if (video.ended) {
+                                                        
+                                                        video.playbackRate = 1.0;
+                                                        isVideoEnded = true; 
+                                                    } else {
+                                                        
+                                                        video.playbackRate = 0.2;
+                                                        setTimeout(updatePercentage, 500);
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    }
+
+                                    
+                                    video.addEventListener('play', function () {
+                                        isVideoEnded = false;
+                                    });
+
+                                    updatePercentage();
+                                });
                             </script>
-						</div>
-						
-					</div>
-				</div>
-			</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		</section>
-		
-
-		
-
-	
-
-		<section id="clients-say"  class="clients-say">
-			<div class="container">
-				<div class="section-header">
-					<h2>Kullanıcı Yorumları</h2>
-				</div>
-				<div class="row">
-					<div class="owl-carousel testimonial-carousel">
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="static/images/clients/c1.png" alt="image of clients person" />
-										</div>
-									</div>
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div>
-									<div class="testimonial-person">
-										<h2><a href="#">tomas lili</a></h2>
-										<h4>new york</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="static/images/clients/c2.png" alt="image of clients person" />
-										</div>
-									</div>
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div>
-									<div class="testimonial-person">
-										<h2><a href="#">romi rain</a></h2>
-										<h4>london</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="static/images/clients/c3.png" alt="image of clients person" />
-										</div>
-									</div>
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div>
-									<div class="testimonial-person">
-										<h2><a href="#">john doe</a></h2>
-										<h4>washington</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</section>
-		
-
-		
-
-		<section id="blog" class="blog"></section>
-
-		<footer id="contact"  class="contact">
-			<div class="container">
-				<div class="footer-top">
-					<div class="row">
-						<div class="col-md-3 col-sm-6">
-							<div class="single-footer-widget">
-								<div class="footer-logo">
-									<a href="index.html">carvilla</a>
-								</div>
-								<p>
-									Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
-								</p>
-								<div class="footer-contact">
-									<p>info@themesine.com</p>
-									<p>+1 (885) 2563154554</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-6">
-							<div class="single-footer-widget">
-								<h2>about devloon</h2>
-								<ul>
-									<li><a href="#">about us</a></li>
-									<li><a href="#">career</a></li>
-									<li><a href="#">terms <span> of service</span></a></li>
-									<li><a href="#">privacy policy</a></li>
-								</ul>
-							</div>
-						</div>
-						
-						<div class="col-md-offset-1 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h2>news letter</h2>
-								<div class="footer-newsletter">
-									<p>
-										Subscribe to get latest news  update and informations
-									</p>
-								</div>
-								<div class="hm-foot-email">
-									<div class="foot-email-box">
-										<input type="text" class="form-control" placeholder="Add Email">
-									</div>
-									<div class="foot-email-subscribe">
-										<span><i class="fa fa-arrow-right"></i></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-copyright">
-					<div class="row">
-						<div class="col-sm-6">
-							<p>
-								&copy; copyright.designed and developed by <a href="https://www.themesine.com/">themesine</a>.
-							</p>
-						</div>
-						<div class="col-sm-6">
-							<div class="footer-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>	
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-								<a href="#"><i class="fa fa-pinterest-p"></i></a>
-								<a href="#"><i class="fa fa-behance"></i></a>	
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-				</div>
-				
-			</div>
-			
-        </footer>
-
-
-		
-
-		<script src="static/js/jquery.js"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-        <script src="static/js/bootstrap.min.js"></script>
-		
-		<script src="static/js/bootsnav.js"></script>
-
-        <script src="static/js/owl.carousel.min.js"></script>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-        <script src="static/js/custom.js"></script>
-        
     </body>
-	
+
+</html>
+
+
+<section id="clients-say" class="clients-say">
+    <div class="container">
+        <div class="section-header">
+            <h2>Kullanıcı Yorumları</h2>
+        </div>
+        <div class="row">
+            <div class="owl-carousel testimonial-carousel">
+                <div class="col-sm-3 col-xs-12">
+                    <div class="single-testimonial-box">
+                        <div class="testimonial-description">
+                            <div class="testimonial-info">
+                                <div class="testimonial-img">
+                                    <img src="static/images/clients/c1.png" alt="image of clients person" />
+                                </div>
+                            </div>
+                            <div class="testimonial-comment">
+                                <p>
+                                    Kolaylıkla park alanı bulabildiğiniz bir site.Puanım 10.
+                                </p>
+                            </div>
+                            <div class="testimonial-person">
+                                <h2><a href="#">Hasan Gül</a></h2>
+                                <h4>Elazığ</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="single-testimonial-box">
+                        <div class="testimonial-description">
+                            <div class="testimonial-info">
+                                <div class="testimonial-img">
+                                    <img src="static/images/clients/c2.png" alt="image of clients person" />
+                                </div>
+                            </div>
+                            <div class="testimonial-comment">
+                                <p>
+                                    Böyle bir siteye ihtiyacım olduğunu bugüne kadar bilmiyordum.
+                                </p>
+                            </div>
+                            <div class="testimonial-person">
+                                <h2><a href="#">Şeyma Çelik</a></h2>
+                                <h4>Elazığ</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="single-testimonial-box">
+                        <div class="testimonial-description">
+                            <div class="testimonial-info">
+                                <div class="testimonial-img">
+                                    <img src="static/images/clients/c3.png" alt="image of clients person" />
+                                </div>
+                            </div>
+                            <div class="testimonial-comment">
+                                <p>
+                                    Gerçekten güzel ve kullanışlı bir uygulama.
+                                </p>
+                            </div>
+                            <div class="testimonial-person">
+                                <h2><a href="#">Ali Yaman</a></h2>
+                                <h4>Elazığ</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="blog" class="blog"></section>
+
+<footer id="contact" class="contact">
+    <div class="container">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <div class="footer-logo">
+                            <a href="/">CarHouse</a>
+                        </div>
+                        <div class="footer-contact">
+                            <p>rburakdinc@gmail.com</p>
+                            <p>serhatobay2121@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h2>Hakkımızda</h2>
+                        <ul>
+                            <li><a href="#">Hakkımızda</a></li>
+                            <li><a href="#">Gizlilik Kuralları</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-offset-1 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h2>Güncel Kalın</h2>
+                        <div class="footer-newsletter">
+                            <p>
+                                Son haber ve güncellemeler için takipte kalın
+                            </p>
+                        </div>
+                        <div class="hm-foot-email">
+                            <div class="foot-email-box">
+                                <input type="text" class="form-control" placeholder="Email Adresi giriniz.">
+                            </div>
+                            <div class="foot-email-subscribe">
+                                <span><i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        &copy; copyright.designed and developed by R.Burak Dinç and Serhat Obay
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="footer-social">
+                        <a href="https://github.com/rburakdinc"><i class="fa fa-github"></i></a>
+                        <a href="https://github.com/serhatobay"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scroll-Top">
+        <div class="return-to-top">
+            <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title=""
+                data-original-title="Back to Top" aria-hidden="true"></i>
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+
+<script src="static/js/jquery.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<script src="static/js/bootstrap.min.js"></script>
+
+<script src="static/js/bootsnav.js"></script>
+
+<script src="static/js/owl.carousel.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<script src="static/js/custom.js"></script>
+
+</body>
+
 </html>
